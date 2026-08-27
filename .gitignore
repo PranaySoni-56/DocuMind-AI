@@ -1,0 +1,36 @@
+# Environment variables
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# API keys and secrets
+secrets.json
+credentials.json
+
+# Local databases
+chroma_db/
+chroma_data/
+
+# Uploaded documents
+data/uploads/
+*.pdf
+
+# Generated images
+*.png
+*.jpg
+*.jpeg
+
+# OS files
+.DS_Store
