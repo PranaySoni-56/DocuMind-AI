@@ -24,65 +24,6 @@ The project combines LLMs, embeddings, vector databases, hybrid retrieval, and d
 ⚠️ Graceful Gemini API quota and error handling
 🖥️ Interactive Gradio interface
 🆓 Designed with free-tier tools and deployment in mind
-🏗️ System Architecture
-                        ┌─────────────────┐
-                        │   PDF Upload    │
-                        └────────┬────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │ Document Processing    │
-                    │                        │
-                    │ • Text Extraction      │
-                    │ • Page Processing      │
-                    │ • Image Extraction     │
-                    └────────────┬───────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │   Document Chunking    │
-                    │                        │
-                    │ • Chunk Size           │
-                    │ • Overlap              │
-                    │ • Metadata             │
-                    └────────────┬───────────┘
-                                 │
-                  ┌──────────────┴──────────────┐
-                  │                             │
-                  ▼                             ▼
-        ┌──────────────────┐         ┌──────────────────┐
-        │ Gemini Embeddings│         │   BM25 Index     │
-        └─────────┬────────┘         └─────────┬────────┘
-                  │                            │
-                  ▼                            ▼
-        ┌──────────────────┐         ┌──────────────────┐
-        │    ChromaDB      │         │ Keyword Retrieval│
-        │ Semantic Search  │         │                  │
-        └─────────┬────────┘         └─────────┬────────┘
-                  │                            │
-                  └──────────────┬─────────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │    Hybrid Retrieval    │
-                    │                        │
-                    │ Semantic + BM25        │
-                    └────────────┬───────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │   Relevant Context     │
-                    └────────────┬───────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │     Gemini LLM         │
-                    └────────────┬───────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │ Answer + Source Pages  │
-                    └────────────────────────┘
 
 
 🧠 How the RAG Pipeline Works
